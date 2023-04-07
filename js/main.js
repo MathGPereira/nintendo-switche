@@ -1,9 +1,20 @@
+import ligaTelaMostraJogo from "./auxiliar/ligaTelaMostraJogo.js";
 import verificaColisao from "./auxiliar/verificarColisao.js";
-import pular from "./acoes/pular.js";
+import mudaEstadoDoNintendo from "./auxiliar/mudaEstado.js";
+import ativaWindows from "./auxiliar/ativaWindows.js";
+import restart from "./auxiliar/restart.js";
 
 const mario = document.querySelector("[data-mario]");
 const cano = document.querySelector("[data-cano]");
 const nuvem = document.querySelector("[data-nuvem]");
+const botaoAbrir = document.querySelector("[data-abrir]");
+const tela = document.querySelector("[data-tela]");
+const ladoDireito = document.querySelector("[data-lado-direito]");
+const botaoLigar = document.querySelector("[data-ligar]");
+const resetar = document.querySelector("[data-restart]");
 
-window.addEventListener("keydown", (evento) => pular(evento, mario));
+ativaWindows(mario)
+botaoAbrir.addEventListener("click", () => mudaEstadoDoNintendo(tela, ladoDireito));
+botaoLigar.addEventListener("click", () => ligaTelaMostraJogo(tela, mario, cano, nuvem));
+resetar.addEventListener("click", () => restart(mario, cano, nuvem));
 verificaColisao(mario, cano, nuvem);
