@@ -16,8 +16,6 @@ export default function verificaColisao(alvo, relativo, nuvem) {
 
             nuvem.style.animation = "none";
             nuvem.style.left = `${posicaoDaNuvem}px`;
-
-            return true;
         }
     }, 5);
 }
