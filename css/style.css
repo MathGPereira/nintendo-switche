@@ -1,0 +1,365 @@
+/* @keyframes direitaEsquerda {
+	from {transform: translateX(0);} 
+	to {transform: translateX(-581px);}
+}
+
+@keyframes diminuiTela {
+	from {width: calc(800px - 220px);}
+	to {width: 0;}
+} */
+
+@keyframes movimentaCano {
+	from {right: -40px;}
+	to {right: calc(100% + 40px);}
+}
+
+@keyframes pularMario {
+	0% {bottom: 0;}
+	40% {bottom: 50px}
+	50% {bottom: 50px}
+	60% {bottom: 50px}
+	100% {bottom: 0;}
+}
+
+@keyframes movimentaNuvem {
+	from {right: -280px;}
+	to{right: calc(100% + 280px);}
+}
+
+* {
+	height: 100vh;
+	width: 100vw;
+}
+
+body {
+	align-items: center;
+	background-image: linear-gradient(black, gray);
+	box-sizing: border-box;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+}
+
+.videogame {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	height: 350px;
+	position: relative;
+	width: 800px;
+}
+
+.videogame__lado-esquerdo {
+	background-color: #EF4A41;
+	border-radius: 60px 0 0 60px;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	z-index: 9;
+}
+
+.lado-esquerdo__botao-menos {
+	background-color: #CCC6AD;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+	height: 3px;
+	position: absolute;
+	right: 10%;
+	top: 2%;
+	width: 12px;
+}
+
+.lado-esquerdo__analogico {
+	background-color: #CCC6AD;
+	border-radius: 50%;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	box-sizing: border-box;
+	height: 45px;
+	left: 50%;
+	position: absolute;
+	top: 20%;
+	transform: translateX(-50%);
+	width: 45px;
+}
+
+.analogico__circulo-interno {
+	border: 1px solid #818181;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	height: 30px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 30px;
+}
+
+.lado-esquerdo__conjunto-setas {
+	height: 70px;
+	left: 50%;
+	position: absolute;
+	top: 55%;
+	transform: translateX(-50%);
+	width: 70px;
+}
+
+.conjunto-setas__seta-vertical {
+	background-color: #CCC6AD;
+	border-radius: 5px;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	height: 70px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 17.5px;
+}
+
+.seta-vertical__detalhe-circular {
+	border: 1px solid #818181;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	height: 10px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 10px;
+}
+
+.superior {
+	top: 2.5%;
+}
+
+.inferior {
+	bottom: 2.5%;
+}
+
+.conjunto-setas__circulo-central {
+	border: 1px solid #818181;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	height: 18px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 18px;
+	z-index: 9;
+}
+
+.conjunto-setas__seta-horizontal {
+	background-color: #CCC6AD;
+	border-radius: 5px;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	height: 17.5px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 70px;
+}
+
+.seta-horizontal__detalhe-circular {
+	border: 1px solid #818181;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	height: 10px;
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	width: 10px;
+}
+
+.esquerda {
+	left: 2.5%;
+}
+
+.direita {
+	right: 2.5%;
+}
+
+.lado-esquerdo__botao-ligar {
+	background-color: white;
+	border: 5px solid black;
+	box-sizing: border-box;
+	bottom: 5%;
+	height: 30px;
+	position: absolute;	
+	right: 12%;
+	width: 30px;
+}
+
+.botao-ligar__icone {
+	height: 18px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 18px;
+}
+
+.videogame__tela {
+	animation: diminuiTela 2s ease-out;
+	background-image: linear-gradient(#87CEEB, #E0F6FF);
+	border: 20px solid black;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5);
+	box-sizing: border-box;
+	height: 330px;
+	left: 110px;
+	overflow: hidden;
+	position: absolute;
+	width: calc(800px - 220px);
+}
+
+.tela__cano {
+	animation: movimentaCano 1.5s infinite linear;
+	bottom: 0;
+	height: 45px;
+	position: absolute;
+	width: 45px;
+}
+
+.tela__mario {
+	bottom: 0;
+	height: 80px;
+	position: absolute;
+	width: auto;
+}
+
+.tela__mario--pular {
+	animation: pularMario 500ms ease-in-out;
+}
+
+.tela__nuvem {
+	animation: movimentaNuvem 4s linear infinite;
+	height: auto;
+	position: absolute;
+	top: 5%;
+	width: 280px;
+}
+
+.videogame__lado-direito {
+	animation: direitaEsquerda 2s ease-out;
+	background-color: #1965F7;
+	border-radius: 0 60px 60px 0;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5);
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 110px;
+	z-index: 9;
+}
+
+.lado-direito__botao-mais {
+	height: 12px;
+	left: 10%;
+	position: absolute;
+	top: 2%;
+	width: 12px;
+}
+
+.botao-mais__vertical {
+	background-color: #CCC6AD;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+	height: 3px;
+	left: 6px;
+	position: absolute;
+	top: 6px;
+	transform: translate(-50%, -50%) rotate(90deg);
+	width: 12px;
+}
+
+.botao-mais__horizontal {
+	background-color: #CCC6AD;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+	height: 3px;
+	position: absolute;
+	top: 6px;
+	transform: translateY(-50%);
+	width: 12px;
+}
+
+.lado-direito__botoes-letras {
+	height: 70px;
+	position: absolute;
+	right: 18%;
+	top: 18%;
+	width: 70px;
+}
+
+.botoes-letras__letra {
+	background-color: #CCC6AD;
+	border: 1px solid #818181;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	box-sizing: border-box;
+	color: #888888;
+	font-size: 14px;
+	font-weight: 700;
+	height: 22px;
+	padding: 2px;
+	position: absolute;
+	text-align: center;
+	width: 22px;
+}
+
+.letra-x {
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+}
+
+.letra-y {
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.letra-a {
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.letra-b {
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+
+.lado-direito__analogico {
+	background-color: #CCC6AD;
+	border-radius: 50%;
+	box-shadow: 3px -2px 5px rgba(0, 0, 0, .5), inset 1px 1px 5px rgba(0, 0, 0, .5);
+	box-sizing: border-box;
+	height: 45px;
+	left: 50%;
+	position: absolute;
+	top: 60%;
+	transform: translateX(-50%);
+	width: 45px;
+}
+
+.lado-direito__botao-home {
+	background-color: white;
+	border: 5px solid black;
+	box-sizing: border-box;
+	bottom: 5%;
+	height: 30px;
+	position: absolute;	
+	left: 12%;
+	width: 30px;
+}
+
+.botao-home__icone {
+	height: 18px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 18px;
+}

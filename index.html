@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Desenhando Com CSS</title>
+		<link type="text/css" rel="stylesheet" href="./css/reset.css">
+		<link type="text/css" rel="stylesheet" href="./css/style.css">
+		<script type="module" src="./js/main.js" defer></script>
+	</head>
+	<body>
+		<div class="videogame">
+			<div class="videogame__lado-esquerdo">
+				<div class="lado-esquerdo__botao-menos"></div>
+				<div class="lado-esquerdo__analogico">
+					<div class="analogico__circulo-interno"></div>
+				</div>
+				<div class="lado-esquerdo__conjunto-setas">
+					<div class="conjunto-setas__seta-vertical">
+						<div class="seta-vertical__detalhe-circular superior"></div>
+						<div class="seta-vertical__detalhe-circular inferior"></div>						
+					</div>
+					<div class="conjunto-setas__circulo-central"></div>
+					<div class="conjunto-setas__seta-horizontal">
+						<div class="seta-horizontal__detalhe-circular esquerda"></div>
+						<div class="seta-horizontal__detalhe-circular direita"></div>					
+					</div>
+				</div>
+				<div class="lado-esquerdo__botao-ligar">
+					<img src="https://img.icons8.com/officel/16/null/shutdown.png" class="botao-ligar__icone">
+				</div>
+			</div>
+			<div class="videogame__tela">
+				<img src="./img/cano.webp" alt class="tela__cano" data-cano>
+				<img src="./img/gif-mario.gif" alt class="tela__mario" data-mario>
+				<img src="./img/nuvem.png" alt class="tela__nuvem" data-nuvem>
+			</div>
+			<div class="videogame__lado-direito">
+				<div class="lado-direito__botao-mais">
+					<div class="botao-mais__vertical"></div>
+					<div class="botao-mais__horizontal"></div>
+				</div>
+				<div class="lado-direito__botoes-letras">
+					<div class="botoes-letras__letra letra-x">X</div>
+					<div class="botoes-letras__letra letra-y">Y</div>
+					<div class="botoes-letras__letra letra-a">A</div>
+					<div class="botoes-letras__letra letra-b">B</div>
+				</div>
+				<div class="lado-direito__analogico">
+					<div class="analogico__circulo-interno"></div>
+				</div>
+				<div class="lado-direito__botao-home">
+					<img src="https://img.icons8.com/ios-filled/50/null/home.png" class="botao-home__icone">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
