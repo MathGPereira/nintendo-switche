@@ -4,7 +4,7 @@
 ![Nintendo Switch](https://img.shields.io/badge/Nintendo_Switch-E60012?style=for-the-badge&logo=nintendo-switch&logoColor=white)
 
 # Nintendo Switch
-![Imagem do projeto]("./img/switch.png")
+![Imagem do projeto](./img/switch.png)
 
 ## Descrição
 Este projeto começou com uma tentativa de desenhar um Nintendo Switch com CSS puro.
