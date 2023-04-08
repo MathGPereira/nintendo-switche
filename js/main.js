@@ -19,5 +19,5 @@ ativaWindows(mario)
 botaoAbrir.addEventListener("click", () => mudaEstadoDoNintendo(tela, ladoDireito));
 botaoLigar.addEventListener("click", () => ligaTelaMostraJogo(tela, mario, cano, nuvem));
 resetar.addEventListener("click", () => restart(mario, cano, nuvem));
-botaoPular.forEach(botao => botao.addEventListener("click", evento => pular(evento, mario)));
+botaoPular.forEach(botao => botao.addEventListener("touchstart", evento => pular(evento, mario)));
 verificaColisao(mario, cano, nuvem);
