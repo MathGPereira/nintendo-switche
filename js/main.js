@@ -13,11 +13,11 @@ const tela = document.querySelector("[data-tela]");
 const ladoDireito = document.querySelector("[data-lado-direito]");
 const botaoLigar = document.querySelector("[data-ligar]");
 const resetar = document.querySelector("[data-restart]");
-const botaoPular = document.querySelector("[data-pular]");
+const botaoPular = document.querySelectorAll("[data-pular]");
 
 ativaWindows(mario)
 botaoAbrir.addEventListener("click", () => mudaEstadoDoNintendo(tela, ladoDireito));
 botaoLigar.addEventListener("click", () => ligaTelaMostraJogo(tela, mario, cano, nuvem));
 resetar.addEventListener("click", () => restart(mario, cano, nuvem));
-botaoPular.addEventListener("click", evento => pular(evento, mario));
+botaoPular.forEach(botao => botao.addEventListener("click", evento => pular(evento, mario)));
 verificaColisao(mario, cano, nuvem);
