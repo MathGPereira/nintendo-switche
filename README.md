@@ -15,5 +15,8 @@ Porém, conforme eu fui terminando o desenho, eu acabei decidindo colocar alguma
 coloquei um pequeno jogo do mário que vi pela primeira vez há alguns anos no vídeo [Como criar um jogo SIMPLES usando JavaScript e HTML | JavaScript para iniciantes - Tutorial](https://www.youtube.com/watch?v=r9buAwVBDhA).
 Assim, surgiu este meu pequeno projeto para quem quiser tentar se divertir.
 
+## Contato
+1. [Linkedin](https://www.linkedin.com/in/matheuspereiradevfront/)
+
 ## Como acessar
 1. [Vercel](nintendo-switche-f01dygg7r-mathgpereira.vercel.app)
