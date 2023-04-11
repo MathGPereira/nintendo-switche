@@ -19,4 +19,4 @@ Assim, surgiu este meu pequeno projeto para quem quiser tentar se divertir.
 1. [Linkedin](https://www.linkedin.com/in/matheuspereiradevfront/)
 
 ## Como acessar
-1. [Vercel](nintendo-switche-f01dygg7r-mathgpereira.vercel.app)
+1. [Vercel](https://www.nintendo-switche-f01dygg7r-mathgpereira.vercel.app)
